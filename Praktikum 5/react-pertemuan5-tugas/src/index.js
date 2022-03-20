@@ -3,18 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ParamsExample from './ParamsExample';
-import NestingExample from './NestingExample';
-import AuthExample from './AuthExample';
-import MarketPlace from './MarketPlace';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <ParamsExample/> */}
-    {/* <NestingExample/> */}
-    <AuthExample/>
-    <MarketPlace/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
