@@ -41,7 +41,7 @@ export default function AuthExample() {
             element={
               <PrivateRoute >
                 <Barangs >
-                  <BarangElektroniks />
+                  <BarangHps />
                 </Barangs>
               </PrivateRoute>
             } 
@@ -121,10 +121,10 @@ function Barangs() {
       <h2>Barang</h2>
       <ul>
         <li>
-          <Link to={"/private/barang/Elektronik"}>Elektronik</Link>
+          <Link to={"/private/barang/Hp"}>Handphone</Link>
         </li>
         <li>
-          <Link to={"/private/barang/Pakaian"}>Pakaian</Link>
+          <Link to={"/private/barang/Tas"}>Tas</Link>
         </li>
         <li>
           <Link to={"/private/barang/Sepatu"}>Sepatu</Link>
@@ -133,26 +133,26 @@ function Barangs() {
 
       <Routes>
         {/* <Route path="/" element={<h3>Harap pilih barang.</h3>} /> */}
-        <Route path="/private/barang/Elektronik" element={<BarangElektroniks />} />
-        <Route path="/private/barang/Pakaian" element={<BarangElektroniks />} />
-        <Route path="/private/barang/Sepatu" element={<BarangElektroniks />} />
+        <Route path="/private/barang/Hp" element={<BarangHps />} />
+        <Route path="/private/barang/Tas" element={<BarangTas />} />
+        <Route path="/private/barang/Sepatu" element={<BarangSepatu />} />
       </Routes>
     </div>
   );
 }
 
-function BarangElektroniks() {
+function BarangHps() {
   return (
     <div>
-      <h2>Barang Elektronik</h2>
+      <h2>Barang Handphone</h2>
     </div>
   );
 }
 
-function BarangPakaian() {
+function BarangTas() {
   return (
     <div>
-      <h2>Barang Pakaian</h2>
+      <h2>Barang Tas</h2>
     </div>
   );
 }
