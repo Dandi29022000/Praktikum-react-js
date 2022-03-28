@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from "../actions/actionTypes"
+import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from "../actions/actionsTypes"
 const INITIAL_DATA = [
     {
         id: 0,
