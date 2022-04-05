@@ -1,19 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
-import ParamsExample from './ParamsExample';
-import NestingExample from './NestingExample';
-import AuthExample from './AuthExample';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    {/* <ParamsExample/> */}
-    {/* <NestingExample/> */}
-    <AuthExample/>
-  </React.StrictMode>,
+ReactDOM.render(<BrowserRouter>
+<App />
+</BrowserRouter>,
   document.getElementById('root')
 );
 
