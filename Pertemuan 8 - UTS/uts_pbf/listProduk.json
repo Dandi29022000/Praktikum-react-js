@@ -1,0 +1,74 @@
+{
+  "produk": [
+    {
+      "id": 1,
+      "nama": "Apple iPhone 13 Pro Max (6GB)",
+      "harga": 19999000,
+      "stok": 26,
+      "gambar": "./images/hp1.jpg"
+    },
+    {
+      "id": 2,
+      "nama": "Apple iPhone 13 Pro (6GB)",
+      "harga": 18499000,
+      "stok": 49,
+      "gambar": "./images/hp2.jpg"
+    },
+    {
+      "id": 3,
+      "nama": "Samsung Galaxy A33 5G (6GB)",
+      "harga": 4699000,
+      "stok": 5,
+      "gambar": "./images/hp3.jpg"
+    },
+    {
+      "id": 4,
+      "nama": "Samsung Galaxy A23 (6GB)",
+      "harga": 3499000,
+      "stok": 9,
+      "gambar": "./images/hp4.jpg"
+    },
+    {
+      "id": 5,
+      "nama": "OPPO A55 (4GB)",
+      "harga": 2429000,
+      "stok": 51,
+      "gambar": "./images/hp5.jpg"
+    },
+    {
+      "id": 6,
+      "nama": "OPPO RENO 7 (8GB)",
+      "harga": 5199000,
+      "stok": 96,
+      "gambar": "./images/hp6.jpg"
+    },
+    {
+      "id": 7,
+      "nama": "Redmi Note 11 (4GB)",
+      "harga": 2499000,
+      "stok": 15,
+      "gambar": "./images/hp7.jpg"
+    },
+    {
+      "id": 8,
+      "nama": "Redmi Note 11 Pro 5G (8GB)",
+      "harga": 4149000,
+      "stok": 28,
+      "gambar": "./images/hp8.jpg"
+    },
+    {
+      "id": 9,
+      "nama": "vivo Y75 5G (8GB)",
+      "harga": 3598000,
+      "stok": 7,
+      "gambar": "./images/hp9.jpg"
+    },
+    {
+      "id": 10,
+      "nama": "vivo V23 5G (8GB)",
+      "harga": 5100000,
+      "stok": 33,
+      "gambar": "./images/hp10.jpg"
+    }
+  ]
+}
