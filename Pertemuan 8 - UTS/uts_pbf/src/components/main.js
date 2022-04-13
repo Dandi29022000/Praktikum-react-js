@@ -16,7 +16,7 @@ class Main extends Component {
         return (
             <Router>
                 <div>
-                    <h1 className="title">GadgetIn.</h1>
+                    <h1 className="title">Online Shop Oven</h1>
                     <ul className="header">
                         <li>
                             <Link to="/">Home</Link>

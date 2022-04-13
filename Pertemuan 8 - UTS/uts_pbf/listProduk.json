@@ -2,73 +2,73 @@
   "produk": [
     {
       "id": 1,
-      "nama": "Apple iPhone 13 Pro Max (6GB)",
-      "harga": 19999000,
-      "stok": 26,
-      "gambar": "./images/hp1.jpg"
+      "nama": "Mito MO-999",
+      "harga": 799000,
+      "stok": 23,
+      "gambar": "./images/oven1.jpg"
     },
     {
       "id": 2,
-      "nama": "Apple iPhone 13 Pro (6GB)",
-      "harga": 18499000,
+      "nama": "Electrolux Oven Toaster EOT 2805K",
+      "harga": 850000,
       "stok": 49,
-      "gambar": "./images/hp2.jpg"
+      "gambar": "./images/oven2.jpg"
     },
     {
       "id": 3,
-      "nama": "Samsung Galaxy A33 5G (6GB)",
-      "harga": 4699000,
-      "stok": 5,
-      "gambar": "./images/hp3.jpg"
+      "nama": "Konka",
+      "harga": 369000,
+      "stok": 4,
+      "gambar": "./images/oven3.jpg"
     },
     {
       "id": 4,
-      "nama": "Samsung Galaxy A23 (6GB)",
-      "harga": 3499000,
+      "nama": "Oxone OX-858BR 4-in-1",
+      "harga": 994000,
       "stok": 9,
-      "gambar": "./images/hp4.jpg"
+      "gambar": "./images/oven4.jpg"
     },
     {
       "id": 5,
-      "nama": "OPPO A55 (4GB)",
-      "harga": 2429000,
+      "nama": "Sharp EO-28LP",
+      "harga": 712000,
       "stok": 51,
-      "gambar": "./images/hp5.jpg"
+      "gambar": "./images/oven5.jpg"
     },
     {
       "id": 6,
-      "nama": "OPPO RENO 7 (8GB)",
-      "harga": 5199000,
+      "nama": "Denpoo DEO-18T",
+      "harga": 834000,
       "stok": 96,
-      "gambar": "./images/hp6.jpg"
+      "gambar": "./images/oven6.jpg"
     },
     {
       "id": 7,
-      "nama": "Redmi Note 11 (4GB)",
-      "harga": 2499000,
+      "nama": "Maspion MOT 1801s",
+      "harga": 721000,
       "stok": 15,
-      "gambar": "./images/hp7.jpg"
+      "gambar": "./images/oven7.jpg"
     },
     {
       "id": 8,
-      "nama": "Redmi Note 11 Pro 5G (8GB)",
-      "harga": 4149000,
+      "nama": "Signora Mini Oven",
+      "harga": 670000,
       "stok": 28,
-      "gambar": "./images/hp8.jpg"
+      "gambar": "./images/oven8.jpg"
     },
     {
       "id": 9,
-      "nama": "vivo Y75 5G (8GB)",
-      "harga": 3598000,
+      "nama": "Cosmos CO-9918",
+      "harga": 978000,
       "stok": 7,
-      "gambar": "./images/hp9.jpg"
+      "gambar": "./images/oven9.jpg"
     },
     {
       "id": 10,
-      "nama": "vivo V23 5G (8GB)",
-      "harga": 5100000,
+      "nama": "Kirin KBO 190 LW",
+      "harga": 732000,
       "stok": 33,
-      "gambar": "./images/hp10.jpg"
+      "gambar": "./images/oven10.jpg"
     }
   ]
 }

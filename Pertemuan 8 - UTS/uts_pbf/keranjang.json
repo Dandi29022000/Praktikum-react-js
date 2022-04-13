@@ -3,42 +3,26 @@
     {
       "id": 1,
       "idProduk": 1,
-      "nama": "Apple iPhone 13 Pro Max (6GB)",
-      "harga": 19999000,
-      "qty": 2,
-      "subTotal": 39998000
+      "nama": "Mito MO-999",
+      "harga": 799000,
+      "qty": 3,
+      "subTotal": 2397000
     },
     {
       "id": 2,
       "idProduk": 2,
-      "nama": "Apple iPhone 13 Pro (6GB)",
-      "harga": 18499000,
+      "nama": "Electrolux Oven Toaster EOT 2805K",
+      "harga": 850000,
       "qty": 1,
-      "subTotal": 18499000
+      "subTotal": 850000
     },
     {
       "id": 3,
       "idProduk": 3,
-      "nama": "Samsung Galaxy A33 5G (6GB)",
-      "harga": 4699000,
+      "nama": "Konka",
+      "harga": 369000,
       "qty": 1,
-      "subTotal": 4699000
-    },
-    {
-      "id": 4,
-      "idProduk": 8,
-      "nama": "Redmi Note 11 Pro 5G (8GB)",
-      "harga": 4149000,
-      "qty": 1,
-      "subTotal": 4149000
-    },
-    {
-      "id": 5,
-      "idProduk": 4,
-      "nama": "Samsung Galaxy A23 (6GB)",
-      "harga": 3499000,
-      "qty": 1,
-      "subTotal": 3499000
+      "subTotal": 369000
     }
   ]
 }
