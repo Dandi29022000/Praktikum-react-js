@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './BlogPost.css';
 import Post from "../../component/BlogPost/Post";
+import API from "../../Services";
 
 class BlogPost extends Component {
     state = {                   // Komponen state dari React untuk statefull component
@@ -12,26 +13,41 @@ class BlogPost extends Component {
             body: ""
         }
     }
-    ambilDataDariServerAPI = () => {        // Fungsi untuk mengambil data dari API dengan penambahan sort dan order 
-        fetch(`http://localhost:3001/posts?_sort=id&_order=desc`)        // Penambahan sort dan order berdasarkan parameter
-            .then(response => response.json())      // Ubah response data dari URL API menjadi sebuah data json
-            .then(jsonHasilAmbilDariAPI => {        // Data json hasil ambil dari API kita masukkan ke dalam listArtikel pada state
-                this.setState({
-                    listArtikel: jsonHasilAmbilDariAPI
-                })
+
+    // ambilDataDariServerAPI = () => {        // Fungsi untuk mengambil data dari API dengan penambahan sort dan order 
+    //     fetch(`http://localhost:3001/posts?_sort=id&_order=desc`)        // Penambahan sort dan order berdasarkan parameter
+    //         .then(response => response.json())      // Ubah response data dari URL API menjadi sebuah data json
+    //         .then(jsonHasilAmbilDariAPI => {        // Data json hasil ambil dari API kita masukkan ke dalam listArtikel pada state
+    //             this.setState({
+    //                 listArtikel: jsonHasilAmbilDariAPI
+    //             })
+    //         })
+    // }
+
+    ambilDataDariServerAPI = () => {
+        API.getNewsBlog().then(result => {
+            this.setState({
+                listArtikel: result
             })
+        })
     }
 
     componentDidMount() {           // Komponen untuk mengecek ketika component telah di-mount-ing, maka panggil API
         this.ambilDataDariServerAPI()   // Ambil data dari server API lokal
     }
 
-    handleHapusArtikel = (data) => {        // Fungsi yang meng-handle button action hapus data
-        fetch(`http://localhost:3001/posts/${data}`, {method: 'DELETE'})        // Alamat URL API yang ingin kita HAPUS datanya
-            .then(res => {      // Ketika proses hapus berhasil, maka ambil data dari server API lokal
-                this.ambilDataDariServerAPI()
-            })
-    }
+    // handleHapusArtikel = (data) => {        // Fungsi yang meng-handle button action hapus data
+    //     fetch(`http://localhost:3001/posts/${data}`, {method: 'DELETE'})        // Alamat URL API yang ingin kita HAPUS datanya
+    //         .then(res => {      // Ketika proses hapus berhasil, maka ambil data dari server API lokal
+    //             this.ambilDataDariServerAPI()
+    //         })
+    // }
+
+    handleHapusArtikel = (data) => {
+        API.deleteNewsBlog(data).then((response) => {
+            this.ambilDataDariSeverAPI();
+        });
+    };
 
     handleTambahArtikel = (event) => {          // Fungsi untuk meng-handle form tambah data artikel 
         let formInsertArtikel = {...this.state.insertArtikel};      // Clonning data state insertArtikel ke dalam variabel formInsertArtikel
@@ -44,17 +60,21 @@ class BlogPost extends Component {
     }
 
     handleTombolSimpan = () => {                                // Fungsi untuk meng-handle tombol simpan
-        fetch(`http://localhost:3001/posts`, {
-            method: 'post',                                     // Method POST untuk input/insert data
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.state.insertArtikel)      // Kirimkan ke body request untuk data artikel yang akan ditambahkan (insert)
-        })
-            .then( (response :Response ) => {
-                this.ambilDataDariServerAPI();                    // Reload / refresh data
-            });
+        // fetch(`http://localhost:3001/posts`, {
+        //     method: 'post',                                     // Method POST untuk input/insert data
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify(this.state.insertArtikel)      // Kirimkan ke body request untuk data artikel yang akan ditambahkan (insert)
+        // })
+        //     .then( (response :Response ) => {
+        //         this.ambilDataDariServerAPI();                    // Reload / refresh data
+        //     });
+        API.postNewsBlog(this.state.insertArtikel)
+            .then( (response) => {
+                this.ambilDataDariServerAPI();
+            })
     }
 
     render() {

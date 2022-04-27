@@ -1,5 +1,6 @@
 import React ,{ Component } from "react";
 import Mp from "../component/mahasiswaPage";
+import API_MHS from "../../src/Services-Mhs";
 
 class mahasiswa extends Component{
             state = {
@@ -13,17 +14,26 @@ class mahasiswa extends Component{
                     alamat:""
                 }
             }
-            ambilDataDariServerAPI = () => {
-                fetch(`http://localhost:3002/mahasiswa?_sort=id&_order=desc`)
-                    .then(response => response.json())
-                    .then(jsonHasilAmbilDariAPI =>{
-                        this.setState({
-                            listMahasiswa:jsonHasilAmbilDariAPI
-                        })
-                    })
-            }
+            // ambilDataDariServerAPI = () => {
+            //     fetch(`http://localhost:3001/mahasiswa?_sort=id&_order=desc`)
+            //         .then(response => response.json())
+            //         .then(jsonHasilAmbilDariAPI =>{
+            //             this.setState({
+            //                 listMahasiswa:jsonHasilAmbilDariAPI
+            //             })
+            //         })
+            // }
+
+            ambilDataDariSeverAPI = () => {
+                API_MHS.getMahasiswa().then((result) => {
+                  this.setState({
+                    listMahasiswa: result,
+                  });
+                });
+              };
+
             componentDidMount(){
-                fetch('http://localhost:3002/mahasiswa')
+                fetch('http://localhost:3001/mahasiswa')
                     .then(response => response.json())
                     .then(jsonHasilAmbilDariAPI => {
                         this.setState({
@@ -32,12 +42,19 @@ class mahasiswa extends Component{
                     })
             }
 
+            // handleHapusMahasiswa = (data) => {
+            //     fetch(`http://localhost:3001/mahasiswa/${data}`,{method: 'DELETE'})
+            //         .then(res => {
+            //             this.componentDidMount()
+            //         })
+            // }
+
             handleHapusMahasiswa = (data) => {
-                fetch(`http://localhost:3002/mahasiswa/${data}`,{method: 'DELETE'})
-                    .then(res => {
-                        this.componentDidMount()
-                    })
-            }
+                API_MHS.deleteMahasiswa(data).then((response) => {
+                  this.ambilDataDariSeverAPI();
+                });
+            };
+
             handleTambahMahasiswa = (event) =>{
                 let formInsertaMahasiswa = {...this.state.insertMahasiswa};
                 // let timestamp = new Date().getTime();
@@ -47,19 +64,25 @@ class mahasiswa extends Component{
                     insertMahasiswa:formInsertaMahasiswa
                 });
             }
-            handleTombolSimpan=()=>{
-                fetch('http://localhost:3002/mahasiswa',{
-                    method:'post',
-                    headers:{
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(this.state.insertMahasiswa)
-                })
-                .then((Response) =>{
-                    this.ambilDataDariServerAPI();
-                })
-            }
+            // handleTombolSimpan=()=>{
+            //     fetch('http://localhost:3001/mahasiswa',{
+            //         method:'post',
+            //         headers:{
+            //             'Accept': 'application/json',
+            //             'Content-Type': 'application/json'
+            //         },
+            //         body: JSON.stringify(this.state.insertMahasiswa)
+            //     })
+            //     .then((Response) =>{
+            //         this.ambilDataDariServerAPI();
+            //     })
+            // }
+
+            handleTombolSimpan = () => {
+                API_MHS.postMahasiswa(this.state.insertMahasiswa).then((response) => {
+                  this.ambilDataDariSeverAPI();
+                });
+            };
 
             render(){
                 return (
